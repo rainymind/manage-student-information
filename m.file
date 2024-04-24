@@ -1,0 +1,38 @@
+% Define a structure to store information for each student
+student.name = '';
+student.grade = 0;
+
+% Define a hierarchical structure to store information for all students
+students = struct('name', {}, 'grade', {});
+
+% Function to add a new student to the list
+function students = addStudent(students, name, grade)
+    newStudent.name = name;
+    newStudent.grade = grade;
+    students = [students, newStudent];
+end
+
+% Function to remove a student from the list based on name
+function students = removeStudent(students, name)
+    index = strcmp({students.name}, name);
+    students(index) = [];
+end
+
+% Function to display information for all students
+function displayStudents(students)
+    disp('Student Name | Grade');
+    for i = 1:length(students)
+        disp([students(i).name, ' | ', num2str(students(i).grade)]);
+    end
+end
+
+% Sample usage of functions to add, remove, and display information
+students = addStudent(students, 'Arman', 18);
+students = addStudent(students, 'Negar', 20);
+students = addStudent(students, 'Mohammad', 16);
+
+displayStudents(students);
+
+students = removeStudent(students, 'Negar');
+
+displayStudents(students);
