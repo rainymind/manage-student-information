@@ -1,4 +1,4 @@
-% Define a structure to store information for each student.02010
+% Define a structure to store information for each student.020
 student.name = '';
 student.grade = 0;
 
