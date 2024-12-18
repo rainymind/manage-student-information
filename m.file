@@ -1,4 +1,4 @@
-% 01
+% 012
 % Define a structure to store information for each student.
 student.name = '';
 student.grade = 0;
